@@ -1,4 +1,8 @@
 #include "node.h"
+/* Name: Ishaan Varma
+   Date: 4/11/2023
+   Purpose: Where node functions are implemented
+ */
 
 node::node() {
   data = 0;

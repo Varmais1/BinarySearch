@@ -1,5 +1,9 @@
 #include <iostream>
 #include <cstring>
+/* Name: Ishaan Varma
+   Date: 4/11/2023
+   Purpose: Node class header file
+ */
 
 class node {
  public:
