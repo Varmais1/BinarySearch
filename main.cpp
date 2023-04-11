@@ -32,6 +32,17 @@ int main() {
       cin >> nData;
       btree.remove(btree.getTop(), NULL, nData);
     }
+    else if(strcmp(command, "search") == 0) {
+      cout << "Which number do you want to search for?" << endl;
+      cin >> nData;
+      bool isThere = btree.search(nData, btree.getTop());
+      if(isThere) {
+	cout << "That number is in the tree." << endl;
+      }
+      else {
+	cout << "That number is not in the tree." << endl;
+      }
+    }
   }
   
   

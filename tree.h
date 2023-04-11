@@ -8,7 +8,7 @@ class tree {
   void add(node* current, node* toAdd);
   void print(node* nTop, int depth);
   void remove(node* current, node* previous, int gone);
-  void search(node* find);
+  bool search(int find, node* current);
   void deleteAll(node* nTop);
  private:
   node* top;

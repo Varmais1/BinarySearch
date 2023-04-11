@@ -143,7 +143,9 @@ void tree::remove(node* current, node* previous, int gone) {
 	  }
 	}
 	swap->setLeft(current->getLeft());
-	swap->setRight(current->getRight());
+	if(swap != current->getRight()) {
+	  swap->setRight(current->getRight());
+	}
 	current->setLeft(NULL);
 	current->setRight(NULL);
 	delete current;
@@ -188,4 +190,20 @@ void tree::remove(node* current, node* previous, int gone) {
 
 node* tree::getTop() {
   return top;
+}
+
+bool tree::search(int find, node* current) {
+  if(current == NULL) {
+    return false;
+  }
+  else if(find == current->getData()) {
+    return true;
+  }
+  else if(find < current->getData()) {
+    return search(find, current->getLeft());
+  }
+  else {
+    return search(find, current->getRight());
+  }
+  return false;
 }
