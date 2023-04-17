@@ -107,7 +107,7 @@ void tree::remove(node* current, node* previous, int gone) {
       //if its not the top
       if(!isTop) {
 	//if the data is less than the previous, set the previous' left to null, and delete the node
-	if(gone =< previous->getData()) {
+	if(gone <= previous->getData()) {
 	  previous->setLeft(NULL);
 	  delete current;
 	}
@@ -128,7 +128,7 @@ void tree::remove(node* current, node* previous, int gone) {
       //if its not the top
       if(!isTop) {
 	//if the data is less than the previous'
-	if(gone =< previous->getData()) {
+	if(gone <= previous->getData()) {
 	  //set the previous' left to the current's right
 	  previous->setLeft(current->getRight());
 	}
